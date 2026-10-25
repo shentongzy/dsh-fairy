@@ -1,0 +1,12 @@
+# dsh-fairy 的 bundle patch —— 把 Fairy 模式挂进 DSH 配置树。
+#
+# 这里只有一个 insert 条目：
+#   - id   : 行标识（全局唯一，且按 DSH 商店契约应与包名一致）
+#   - name : 模块名，解析到本包的 lib/index.js（宿主半边入口）
+#
+# 注意：`id:` 那一行结尾不要写注释，商城预检的正则抓不到 entry ID 会把提交判为
+# SUBMISSION_ENTRY_MISSING。
+
+- insert:
+    - id: dsh-fairy
+      name: 'dsh-fairy'

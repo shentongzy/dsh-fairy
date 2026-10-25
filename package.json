@@ -1,0 +1,39 @@
+{
+  "name": "dsh-fairy",
+  "version": "0.1.0",
+  "description": "绝区零 Fairy 模式：把《绝区零》里 Random Play 录像店的家用 AI「Fairy」的人设接进 DeepSeek Harness。用 /fairy 切换，按会话记忆。",
+  "icon": "assets/icon.png",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "persona",
+    "mode",
+    "zenless-zone-zero",
+    "fairy"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "persona",
+    "assets/icon.png",
+    "cordis.patch.yml",
+    "README.zh.md"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
